@@ -7,11 +7,13 @@
 <div class=banner>
   <div class="container">
 
-
-
-
   </div>
 </div>
-  <% @lists.each do |list| %>
-    <%= link_to list.name, list_path(list) %>
-  <% end %>
+
+  <div class=card_container>
+        <% @lists.each do |list| %>
+    <div class=card>
+        <%= link_to list.name, list_path(list), class: 'btn' %>
+    </div>
+      <% end %>
+  </div>
